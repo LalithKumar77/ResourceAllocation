@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Exchange - Inter-Departmental Platform</title>
+    <link rel="stylesheet" href="../../static/css/Admin/dataExchange.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul class="menu">
+            <li><a href="./home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="./profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="./dashboard.html"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+            <li><a href="./projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li class="active"><a href="./dataExchange.html"><i class="fas fa-database"></i> Data Exchange</a></li>
+            <li><a href="./scheduling.html"><i class="fas fa-calendar-alt"></i> Scheduling</a></li>
+            <li><a href="./forums.html"><i class="fas fa-comments"></i> Forums</a></li>
+            
+        </ul>
+    </div>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <div class="date-filter">
+                <input type="text" id="dateRange" placeholder="Select Date" readonly>
+                <span class="calendar-icon">📅</span>
+            </div>
+        </div>
+
+        <!-- Data Overview -->
+        <div class="section data-overview">
+            <h2>Data Overview</h2>
+            <div class="summary-cards">
+                <div class="card">Data Exchange Requests: <strong>124</strong></div>
+                <div class="card">Active Discussions: <strong>30</strong></div>
+                <div class="card">AI Assistance Queries: <strong>45</strong></div>
+                <div class="card">Recent Updates: <strong>12</strong></div>
+            </div>
+        </div>
+
+        <!-- Discussion Forums -->
+        <div class="section discussion-forums">
+            <h2>Discussion Forums</h2>
+            <div class="forum-card">
+                <h3>Forum Topic 1</h3>
+                <p>Brief description of the discussion or forum topic. Engage with the community.</p>
+            </div>
+            <div class="forum-card">
+                <h3>Forum Topic 2</h3>
+                <p>Brief description of the discussion or forum topic. Engage with the community.</p>
+            </div>
+        </div>
+
+        <!-- AI Assistance -->
+        <div class="section ai-assistance">
+            <h2>AI Assistance</h2>
+            <div class="ai-container">
+                AI-powered tools and assistance for data exchange and project management.
+            </div>
+        </div>
+
+        <!-- Graphs Section -->
+        <div class="section charts-section">
+            <h2>Data Analytics</h2>
+            <div class="chart-container">
+                <canvas id="dataExchangeChart" class="canvas-container"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="discussionTrendsChart" class="canvas-container"></canvas>
+            </div>
+        </div>
+
+        <!-- Chatbot Button -->
+   <div class="chatbot-container">
+    <button class="chatbot-btn" onclick="toggleChatbot()">
+        <i class="fa fa-comments"></i>
+    </button>
+</div>
+
+<!-- Chatbot Popup -->
+<div id="chatbotPopup" class="chatbot-popup">
+    <div class="chatbot-header">
+        <h2>Chatbot</h2>
+        <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+    </div>
+    <div id="chatWindow" class="chatbot-body"></div>
+    <div class="chatbot-footer">
+        <input type="text" id="userInput" placeholder="Type your message here..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+    <script src="../../static/js/admin/chatbot.js"></script>
+    <script src="../../static/js/admin/dataExchange.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forums</title>
+    <link rel="stylesheet" href="../../static/css/Admin/forums.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.0/chart.min.js" defer></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul class="menu">
+            <li><a href="./home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="./profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="./dashboard.html"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+            <li><a href="./projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="./dataExchange.html"><i class="fas fa-database"></i> Data Exchange</a></li>
+            <li><a href="./scheduling.html"><i class="fas fa-calendar-alt"></i> Scheduling</a></li>
+            <li class="active"><a href="./forums.html"><i class="fas fa-comments"></i> Forums</a></li>
+            
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Forums</h1>
+            <input type="text" id="searchInput" placeholder="Search discussions...">
+        </div>
+        <div class="forum-categories">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#" class="category-item">General Discussion</a></li>
+                <li><a href="#" class="category-item">Project Updates</a></li>
+                <li><a href="#" class="category-item">Technical Support</a></li>
+                <li><a href="#" class="category-item">Best Practices</a></li>
+                <!-- Add more categories as needed -->
+            </ul>
+        </div>
+        <div class="forum-thread">
+            <h2>Discussion Threads</h2>
+            <div class="thread-actions">
+                <button id="createPostBtn" class="button">Create New Post</button>
+            </div>
+            <div class="threads-list">
+                <!-- Example Thread -->
+                <div class="thread-card">
+                    <div class="thread-header">
+                        <h3>Project A - Status Update</h3>
+                        <span class="date">Sep 19, 2024</span>
+                    </div>
+                    <div class="thread-body">
+                        <p>Discussion about the current status of Project A, including recent achievements and upcoming milestones.</p>
+                    </div>
+                    <div class="thread-footer">
+                        <button class="button">Reply</button>
+                        <button class="button">Like</button>
+                    </div>
+                </div>
+                <!-- Repeat for more threads -->
+            </div>
+        </div>
+    </div>
+       <!-- Chatbot Button -->
+   <div class="chatbot-container">
+    <button class="chatbot-btn" onclick="toggleChatbot()">
+        <i class="fa fa-comments"></i>
+    </button>
+    </div>
+
+<!-- Chatbot Popup -->
+    <div id="chatbotPopup" class="chatbot-popup">
+        <div class="chatbot-header">
+            <h2>Chatbot</h2>
+            <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+        </div>
+        <div id="chatWindow" class="chatbot-body"></div>
+        <div class="chatbot-footer">
+            <input type="text" id="userInput" placeholder="Type your message here..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="../../static/js/admin/chatbot.js"></script>
+    <script >
+        document.addEventListener('DOMContentLoaded', function() {
+    const createPostBtn = document.getElementById('createPostBtn');
+    createPostBtn.addEventListener('click', function() {
+        // Code to open modal or redirect to a page for creating a new post
+        alert('Create New Post button clicked');
+    });
+});
+
+    </script>
+</body>
+</html>

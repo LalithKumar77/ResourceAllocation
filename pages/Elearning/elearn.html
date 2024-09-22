@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upskill | E-Learning Platform</title>
+    <link rel="stylesheet" href="../../static/css/Elearning/elearn.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Upskill</h2>
+        </div>
+        <a href="./upskildash.html">Dashboard</a>
+        <a href="./upskillcourse.html">Courses</a>
+        <a href="#">My Progress</a>
+        <a href="#" class="active">Discussions</a>
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search workshops and courses..." onkeyup="filterContent()">
+            </div>
+            <div class="filter-dropdown">
+                <button onclick="toggleDropdown()">Filter</button>
+                <div id="dropdown" class="dropdown-content">
+                    <a href="#" onclick="filterByType('all')">All</a>
+                    <a href="#" onclick="filterByType('workshop')">Workshops</a>
+                    <a href="#" onclick="filterByType('video')">Videos</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Workshops Section -->
+        <section class="workshops">
+            <h1>Workshops & Webinars</h1>
+            <div class="workshop-list">
+                <div class="card workshop" data-type="workshop">
+                    <h3>Workshop 1: Urban Planning</h3>
+                    <p>Learn about smart urban planning and how to apply it to government projects.</p>
+                    <button>WATCH NOW</button>
+                </div>
+                <div class="card workshop" data-type="workshop">
+                    <h3>Workshop 2: Digital Marketing</h3>
+                    <p>Master digital marketing strategies to help businesses thrive in the online world.</p>
+                    <button>WATCH NOW</button>
+                </div>
+                <div class="card workshop" data-type="workshop">
+                    <h3>Workshop 3: AI for Everyone</h3>
+                    <p>Discover how AI is transforming industries and how you can leverage it in your work.</p>
+                </div>
+                <div class="card workshop" data-type="workshop">
+                    <h3>Workshop 4: Data Analysis</h3>
+                    <p>Learn data analysis techniques to improve decision-making processes.</p>
+                    <button>WATCH NOW</button>
+                </div>
+                <div class="card workshop" data-type="workshop">
+                    <h3>Workshop 5: Sustainable Development</h3>
+                    <p>Understand sustainable development goals and their global impact.</p>
+                    <button>WATCH NOW</button>
+                </div>
+                <div class="card workshop" data-type="workshop">
+                    <h3>Workshop 6: Leadership Skills</h3>
+                    <p>Enhance your leadership skills to inspire and motivate teams.</p>
+                    <button>WATCH NOW</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Suggested Videos Section -->
+        <section class="suggested-videos">
+            <h1>Suggested YouTube Videos</h1>
+            <div class="video-list">
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_1" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 1</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_2" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 2</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_3" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 3</h3>
+                </div>
+                <!-- Additional videos -->
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_4" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 4</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_5" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 5</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_6" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 6</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_7" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 7</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_8" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 8</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_9" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 9</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_10" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 10</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_11" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 11</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_12" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 12</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_13" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 13</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_14" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 14</h3>
+                </div>
+                <div class="video-card" data-type="video">
+                    <iframe src="https://www.youtube.com/embed/video_id_15" frameborder="0" allowfullscreen></iframe>
+                    <h3>Video Title 15</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- JavaScript for Filter -->
+    <script>
+        // Toggle Dropdown
+        function toggleDropdown() {
+            document.getElementById('dropdown').classList.toggle('show');
+        }
+
+        // Filter Content by Type (Workshops or Videos)
+        function filterByType(type) {
+            var cards = document.querySelectorAll('.card, .video-card');
+            cards.forEach(function(card) {
+                if (type === 'all' || card.getAttribute('data-type') === type) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Filter Content by Search Input
+        function filterContent() {
+            var input = document.getElementById('searchInput');
+            var filter = input.value.toLowerCase();
+            var cards = document.querySelectorAll('.card, .video-card');
+            cards.forEach(function(card) {
+                var text = card.innerText.toLowerCase();
+                if (text.includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Close the dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.filter-dropdown button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

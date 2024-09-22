@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-container {
+    perspective: 1000px;
+}
+
+.form-box {
+    position: relative;
+    width: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.form {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: all 0.8s ease;
+}
+
+.login-form {
+    transform: rotateY(0deg);
+}
+
+.signup-form {
+    transform: rotateY(180deg);
+}
+
+.form-box.active .login-form {
+    transform: rotateY(180deg);
+}
+
+.form-box.active .signup-form {
+    transform: rotateY(360deg);
+}
+
+h2 {
+    font-size: 24px;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #aaa;
+    pointer-events: none;
+    transition: top 0.3s ease, font-size 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #3498db;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: #3498db;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.switch-form {
+    margin-top: 15px;
+    color: #555;
+    font-size: 14px;
+}
+
+.switch-form span {
+    color: #3498db;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.switch-form span:hover {
+    color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .form {
+        padding: 30px;
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upskill - Courses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./upskillcourse.css"> -->
+     <link rel="stylesheet" href="../../static/css/Elearning/upskillcourse.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Upskill</h2>
+        </div>
+        <a href="./upskildash.html">Dashboard</a>
+        <a href="./upskillcourse.html" class="active">Courses</a>
+        <a href="#">My Progress</a>
+        <a href="#">Discussions</a>
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h2>Courses</h2>
+            <div class="search-filter">
+                <input type="text" id="courseSearch" placeholder="Search for courses...">
+                <select id="filterCourses">
+                    <option value="">Filter by Category</option>
+                    <option value="urban-planning">Urban Planning</option>
+                    <option value="housing-policy">Housing Policy</option>
+                    <option value="sustainable-development">Sustainable Development</option>
+                </select>
+            </div>
+        </header>
+
+        <section class="courses-section">
+            <div class="enrolled-courses">
+                <h3>Enrolled Courses</h3>
+                <div class="course-box">
+                    <h4>Urban Design Principles</h4>
+                    <p>Category: Urban Planning</p>
+                    <button class="btn unenroll">Unenroll</button>
+                </div>
+                <div class="course-box">
+                    <h4>Sustainable Housing Strategies</h4>
+                    <p>Category: Housing Policy</p>
+                    <button class="btn unenroll">Unenroll</button>
+                </div>
+            </div>
+
+            <div class="available-courses">
+                <h3>Available Courses</h3>
+                <div class="course-list">
+                    <div class="course-box">
+                        <h4>Smart City Development</h4>
+                        <p>Category: Urban Planning</p>
+                        <button class="btn enroll">Enroll</button>
+                    </div>
+                    <div class="course-box">
+                        <h4>Housing Policy and Reform</h4>
+                        <p>Category: Housing Policy</p>
+                        <button class="btn enroll">Enroll</button>
+                    </div>
+                    <div class="course-box">
+                        <h4>Public Participation in Urban Planning</h4>
+                        <p>Category: Urban Planning</p>
+                        <button class="btn enroll">Enroll</button>
+                    </div>
+                    <div class="course-box">
+                        <h4>Sustainable Urban Development</h4>
+                        <p>Category: Sustainable Development</p>
+                        <button class="btn enroll">Enroll</button>
+                    </div>
+                    <div class="course-box">
+                        <h4>Data Analysis for Urban Planners</h4>
+                        <p>Category: Urban Planning</p>
+                        <button class="btn enroll">Enroll</button>
+                    </div>
+                    <div class="course-box">
+                        <h4>Affordable Housing Initiatives</h4>
+                        <p>Category: Housing Policy</p>
+                        <button class="btn enroll">Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

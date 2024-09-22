@@ -1,0 +1,174 @@
+/* General Styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #2c3e50;
+    background-color: #f4f6f7;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #2c3e50;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.sidebar h2 {
+    font-size: 26px;
+    margin-bottom: 40px;
+    color: #ecf0f1;
+    text-align: center;
+}
+
+.sidebar a {
+    color: #bdc3c7;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 16px;
+    display: block;
+    border-radius: 6px;
+    transition: background 0.3s, padding-left 0.3s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: #34495e;
+    padding-left: 20px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 220px;
+    padding: 40px;
+    background-color: #f4f6f7;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: #2c3e50;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+header h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Search and Filter */
+.search-filter input,
+.search-filter select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Discussion Section */
+.discussion-section {
+    margin-top: 20px;
+}
+
+/* Create Thread Form */
+.create-thread h3 {
+    font-size: 22px;
+    color: #34495e;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+#create-thread-form input,
+#create-thread-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#create-thread-form button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#create-thread-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Discussion Thread List */
+.discussion-list {
+    margin-top: 20px;
+}
+
+.discussion-thread {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.discussion-thread h4 {
+    font-size: 20px;
+    color: #2980b9;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.discussion-thread p {
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+.discussion-thread .thread-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.thread-actions a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.thread-actions a:hover {
+    color: #2980b9;
+}
+
+.thread-actions .replies-count,
+.thread-actions .upvotes {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.thread-actions .upvotes i {
+    color: #2c3e50;
+    margin-right: 5px;
+}

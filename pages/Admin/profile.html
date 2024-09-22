@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../../static/css/Admin/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul class="menu">
+            <li><a href="./home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li class="active"><a href="./profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="./dashboard.html"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+            <li><a href="./projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="./dataExchange.html"><i class="fas fa-database"></i> Data Exchange</a></li>
+            <li><a href="./scheduling.html"><i class="fas fa-calendar-alt"></i> Scheduling</a></li>
+            <li><a href="./forums.html"><i class="fas fa-comments"></i> Forums</a></li>
+            
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Profile Overview</h1>
+        </div>
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/120" alt="Profile Picture">
+            <h2>John Doe</h2>
+            <p>Project Manager</p>
+            <a href="#" class="button">Edit Profile</a>
+        </div>
+        <div class="profile-details">
+            <h3>Profile Details</h3>
+            <div class="detail">
+                <label for="email">Email:</label>
+                <p>johndoe@example.com</p>
+            </div>
+            <div class="detail">
+                <label for="phone">Phone:</label>
+                <p>+123 456 7890</p>
+            </div>
+            <div class="detail">
+                <label for="department">Department:</label>
+                <p>Urban Planning</p>
+            </div>
+        </div>
+        <div class="graph-container">
+            <h2>Project Statistics</h2>
+            <canvas id="projectChart"></canvas>
+        </div>
+        <div class="chatbot-container">
+            <button class="chatbot-btn" onclick="toggleChatbot()">
+                <i class="fa fa-comments"></i>
+            </button>
+        </div>
+        
+        <!-- Chatbot Popup -->
+        <div id="chatbotPopup" class="chatbot-popup">
+            <div class="chatbot-header">
+                <h2>Chatbot</h2>
+                <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+            </div>
+            <div id="chatWindow" class="chatbot-body"></div>
+            <div class="chatbot-footer">
+                <input type="text" id="userInput" placeholder="Type your message here..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../static/js/admin/chatbot.js"></script>
+    <script>
+        // JavaScript to render Chart.js graph
+        const ctx = document.getElementById('projectChart').getContext('2d');
+        const projectChart = new Chart(ctx, {
+            type: 'bar', // Change to your desired chart type
+            data: {
+                labels: ['Project A', 'Project B', 'Project C', 'Project D'],
+                datasets: [{
+                    label: 'Project Completion Status',
+                    data: [75, 50, 90, 60],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

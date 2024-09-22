@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussions - Upskill Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./upskilldiscussion.css"> -->
+    <link rel="stylesheet" href="../../static/css/Elearning/upskilldiscussion.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Upskill</h2>
+        </div>
+        <a href="./upskildash.html">Dashboard</a>
+        <a href="./upskillcourse.html">Courses</a>
+        <a href="#">My Progress</a>
+        <a href="#" class="active">Discussions</a>
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h2>Discussions</h2>
+            <div class="search-filter">
+                <input type="text" placeholder="Search discussions..." id="discussion-search">
+                <select id="discussion-filter">
+                    <option value="all">All Discussions</option>
+                    <option value="unread">Unread</option>
+                    <option value="active">Active</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- Discussion Threads -->
+        <section class="discussion-section">
+            <div class="create-thread">
+                <h3>Start a New Discussion</h3>
+                <form id="create-thread-form">
+                    <input type="text" placeholder="Title" required>
+                    <textarea placeholder="What's on your mind?" rows="5" required></textarea>
+                    <button type="submit" class="btn-submit">Create Thread</button>
+                </form>
+            </div>
+
+            <div class="discussion-list">
+                <div class="discussion-thread">
+                    <h4>How to improve project management skills?</h4>
+                    <p>Posted by <span class="user">John Doe</span> on <span class="date">Sept 25, 2024</span></p>
+                    <p>Anyone has tips or resources to improve project management skills? I am looking for something that goes beyond basic management skills...</p>
+                    <div class="thread-actions">
+                        <a href="#" class="view-thread">View Discussion</a>
+                        <span class="replies-count">5 Replies</span>
+                        <span class="upvotes"><i class="fas fa-thumbs-up"></i> 10</span>
+                    </div>
+                </div>
+                <div class="discussion-thread">
+                    <h4>How to improve project management skills?</h4>
+                    <p>Posted by <span class="user">John Doe</span> on <span class="date">Sept 25, 2024</span></p>
+                    <p>Anyone has tips or resources to improve project management skills? I am looking for something that goes beyond basic management skills...</p>
+                    <div class="thread-actions">
+                        <a href="#" class="view-thread">View Discussion</a>
+                        <span class="replies-count">5 Replies</span>
+                        <span class="upvotes"><i class="fas fa-thumbs-up"></i> 10</span>
+                    </div>
+                </div>
+        
+                <!-- Thread 2 -->
+                <div class="discussion-thread">
+                    <h4>Best online resources for learning data analysis?</h4>
+                    <p>Posted by <span class="user">Jane Smith</span> on <span class="date">Sept 22, 2024</span></p>
+                    <p>I want to become proficient in data analysis, particularly in Excel and Python. Does anyone have recommendations for courses, books, or YouTube tutorials?</p>
+                    <div class="thread-actions">
+                        <a href="#" class="view-thread">View Discussion</a>
+                        <span class="replies-count">3 Replies</span>
+                        <span class="upvotes"><i class="fas fa-thumbs-up"></i> 8</span>
+                    </div>
+                </div>
+        
+                <!-- Thread 3 -->
+                <div class="discussion-thread">
+                    <h4>How to stay motivated while learning new skills?</h4>
+                    <p>Posted by <span class="user">Alice Brown</span> on <span class="date">Sept 18, 2024</span></p>
+                    <p>Learning new skills can be overwhelming. How do you stay motivated and disciplined? Any personal tips or methods that work for you?</p>
+                    <div class="thread-actions">
+                        <a href="#" class="view-thread">View Discussion</a>
+                        <span class="replies-count">12 Replies</span>
+                        <span class="upvotes"><i class="fas fa-thumbs-up"></i> 15</span>
+                    </div>
+                </div>
+        
+                <!-- Thread 4 -->
+                <div class="discussion-thread">
+                    <h4>What are the best platforms for learning web development?</h4>
+                    <p>Posted by <span class="user">Michael Lee</span> on <span class="date">Sept 15, 2024</span></p>
+                    <p>Can someone suggest the best platforms to learn HTML, CSS, and JavaScript? I am looking for a structured path for beginners to intermediate level.</p>
+                    <div class="thread-actions">
+                        <a href="#" class="view-thread">View Discussion</a>
+                        <span class="replies-count">7 Replies</span>
+                        <span class="upvotes"><i class="fas fa-thumbs-up"></i> 9</span>
+                    </div>
+                </div>
+        
+                <!-- Thread 5 -->
+                <div class="discussion-thread">
+                    <h4>How do you practice coding consistently?</h4>
+                    <p>Posted by <span class="user">David White</span> on <span class="date">Sept 10, 2024</span></p>
+                    <p>I often find it difficult to practice coding regularly. How do you incorporate it into your daily routine? Any apps or strategies to stay consistent?</p>
+                    <div class="thread-actions">
+                        <a href="#" class="view-thread">View Discussion</a>
+                        <span class="replies-count">10 Replies</span>
+                        <span class="upvotes"><i class="fas fa-thumbs-up"></i> 20</span>
+                    </div>
+                </div>
+        
+                <!-- Thread 6 -->
+                <div class="discussion-thread">
+                    <h4>Best project ideas for practicing Python?</h4>
+                    <p>Posted by <span class="user">Sarah Johnson</span> on <span class="date">Sept 5, 2024</span></p>
+                    <p>I want to build practical projects to improve my Python skills. What are some good project ideas for beginners to intermediate level?</p>
+                    <div class="thread-actions">
+                        <a href="#" class="view-thread">View Discussion</a>
+                        <span class="replies-count">8 Replies</span>
+                        <span class="upvotes"><i class="fas fa-thumbs-up"></i> 12</span>
+                    </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./upskillmyprofile.css"> -->
+     <link rel="stylesheet" href="../../static/css/Elearning/upskillmyprofile.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Upskill</h2>
+        </div>
+        <a href="./upskildash.html">Dashboard</a>
+        <a href="./upskillcourse.html">Courses</a>
+        <a href="#">My Progress</a>
+        <a href="#">Discussions</a>
+        <a href="#" class="active">Profile</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h1>Welcome, John Doe!</h1>
+            <p>We are glad to have you on board. Here's a summary of your learning journey.</p>
+        </section>
+
+        <header>
+            <h2>Employee Profile</h2>
+        </header>
+
+        <!-- Employee Details Section with Card -->
+        <section class="employee-details">
+            <h3>Employee Details</h3>
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Position:</strong> Urban Planner</p>
+                    <p><strong>Department:</strong> Ministry of Housing and Urban Affairs</p>
+                    <p><strong>Email:</strong> johndoe@example.com</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section class="courses-section">
+            <h3>Courses</h3>
+            <div class="completed-courses">
+                <h4>Completed Courses</h4>
+                <ul>
+                    <li>Urban Planning Strategies</li>
+                    <li>Smart Cities and Infrastructure</li>
+                </ul>
+            </div>
+
+            <div class="ongoing-courses">
+                <h4>Currently Enrolled Courses</h4>
+                <ul>
+                    <li>Green Building Techniques</li>
+                    <li>Sustainable Urban Design</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Webinars & Seminars Section -->
+        <section class="webinars-section">
+            <h3>Webinars & Seminars Attended</h3>
+            <ul>
+                <li>Smart City Technologies - 12th July 2023</li>
+                <li>Urban Mobility Solutions - 5th August 2023</li>
+            </ul>
+        </section>
+
+        <!-- Discussions Section -->
+        <section class="discussions-section">
+            <h3>Discussions Involved In</h3>
+            <ul>
+                <li>Future of Urban Planning in India</li>
+                <li>Technology in Smart Cities</li>
+            </ul>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="statistics-section">
+            <h3>Learning Statistics</h3>
+            <div>
+                <canvas id="coursesChart"></canvas>
+            </div>
+            <div>
+                <canvas id="skillsChart"></canvas>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Courses Chart
+        var ctxCourses = document.getElementById('coursesChart').getContext('2d');
+        var coursesChart = new Chart(ctxCourses, {
+            type: 'bar',
+            data: {
+                labels: ['Completed', 'Ongoing'],
+                datasets: [{
+                    label: 'Courses',
+                    data: [2, 2],
+                    backgroundColor: ['#3498db', '#2ecc71']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Skills Chart
+        var ctxSkills = document.getElementById('skillsChart').getContext('2d');
+        var skillsChart = new Chart(ctxSkills, {
+            type: 'pie',
+            data: {
+                labels: ['Urban Planning', 'Sustainable Design', 'Green Building'],
+                datasets: [{
+                    label: 'Skills',
+                    data: [30, 40, 30],
+                    backgroundColor: ['#f1c40f', '#e74c3c', '#3498db']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>

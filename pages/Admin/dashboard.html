@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../../static/css/Admin/dashboard.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul class="menu">
+            <li><a href="./home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="./profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li class="active"><a href="./dashboard.html"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+            <li><a href="./projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="./dataExchange.html"><i class="fas fa-database"></i> Data Exchange</a></li>
+            <li><a href="./scheduling.html"><i class="fas fa-calendar-alt"></i> Scheduling</a></li>
+            <li><a href="./forums.html"><i class="fas fa-comments"></i> Forums</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Search Bar and Icons -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+            <div class="icons">
+                <button class="icon-btn" id="notificationBtn"><i class="fas fa-bell"></i></button>
+                <button class="icon-btn" id="mailBtn"><i class="fas fa-envelope"></i></button>
+            </div>
+        </div>
+
+        <!-- Major Products Section -->
+        <div class="major-products-section">
+            <h2>Major Products</h2>
+            <a href="./project1.html" class="product-card">
+                <div class="card-image">
+                    <img src="../startbootstrap-sb-admin-2-gh-pages/img/Pradhan_Mantri_Awas_Yojana-Urban_(PMAY-U)_logo.png" alt="Project 1">
+                </div>
+                <div class="card-content">
+                    <h3>Project 1</h3>
+                    <p>Overview and details about Product 1.</p>
+                </div>
+                <div class="card-chart">
+                    <canvas id="chartProduct1"></canvas>
+                </div>
+            </a>
+            <a href="" class="product-card">
+                <div class="card-image">
+                    <img src="../startbootstrap-sb-admin-2-gh-pages/img/traffic.jpg" alt="Project 2">
+                </div>
+                <div class="card-content">
+                    <h3>Project 2</h3>
+                    <p>Overview and details about Product 2.</p>
+                </div>
+                <div class="card-chart">
+                    <canvas id="chartProduct2"></canvas>
+                </div>
+            </a>
+            <!-- Add more product cards as needed -->
+        </div>
+
+        <!-- Overview Section (Cards) -->
+        <div class="overview-section">
+            <div class="card ongoing-project">
+                <h3>Ongoing Projects</h3>
+             
+                <div class="chart-container">
+                    <canvas id="ongoingProjectsChart"></canvas>
+                </div>
+                <div class="card-3d-illustration"></div>
+            </div>
+            <div class="card completed-project">
+                <h3>Completed Projects</h3>
+                
+                <div class="chart-container">
+                    <canvas id="completedProjectsChart"></canvas>
+                </div>
+                <div class="card-3d-illustration"></div>
+            </div>
+            <div class="card upcoming-project">
+                <h3>Upcoming Projects</h3>
+        
+                <div class="chart-container">
+                    <canvas id="upcomingProjectsChart"></canvas>
+                </div>
+                <div class="card-3d-illustration"></div>
+            </div>
+            <!-- Add this inside the .overview-section div -->
+<div class="card resource-card">
+    <h3>Total Resources Available</h3>
+    <div class="resource-visual">
+        <canvas id="totalResourcesChart"></canvas>
+    </div>
+    <p class="resource-amount">1000 units</p>
+</div>
+
+<div class="card resource-card">
+    <h3>Resources Used</h3>
+    <div class="resource-visual">
+        <canvas id="resourcesUsedChart"></canvas>
+    </div>
+    <p class="resource-amount">600 units</p>
+</div>
+
+        </div>
+
+        <!-- Graphs Section -->
+        <div class="graphs-section">
+            <div class="graph-container">
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="graph-container">
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="graph-container">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Projects List (Table) -->
+        <div class="projects-list">
+            <h2>Projects Overview</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Status</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Smart City Initiative</td>
+                        <td>Ongoing</td>
+                        <td>2023-01-15</td>
+                        <td>2024-12-31</td>
+                    </tr>
+                    <tr>
+                        <td>Urban Planning</td>
+                        <td>Completed</td>
+                        <td>2022-03-01</td>
+                        <td>2023-02-28</td>
+                    </tr>
+                    <tr>
+                        <td>Transport Infrastructure</td>
+                        <td>Upcoming</td>
+                        <td>2024-05-01</td>
+                        <td>2025-06-30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   <!-- Chatbot Button -->
+   <div class="chatbot-container">
+    <button class="chatbot-btn" onclick="toggleChatbot()">
+        <i class="fa fa-comments"></i>
+    </button>
+</div> 
+
+<!-- Chatbot Popup -->
+<div id="chatbotPopup" class="chatbot-popup">
+    <div class="chatbot-header">
+        <h2>Chatbot</h2>
+        <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+    </div>
+    <div id="chatWindow" class="chatbot-body"></div>
+    <div class="chatbot-footer">
+        <input type="text" id="userInput" placeholder="Type your message here..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../static/js/admin/chatbot.js"></script>
+
+    <script src="../../static/js/admin/dashboard.js"></script>
+
+    <!-- JavaScript for Graphs -->
+    <script>
+        // Bar Chart
+        const ctxBar = document.getElementById('barChart').getContext('2d');
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May'],
+                datasets: [{
+                    label: 'Projects Completed',
+                    data: [5, 10, 15, 8, 12],
+                    backgroundColor: 'rgba(52, 152, 219, 0.5)',
+                    borderColor: 'rgba(41, 128, 185, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Line Chart
+        const ctxLine = document.getElementById('lineChart').getContext('2d');
+        new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May'],
+                datasets: [{
+                    label: 'New Projects',
+                    data: [3, 7, 2, 6, 9],
+                    backgroundColor: 'rgba(46, 204, 113, 0.5)',
+                    borderColor: 'rgba(39, 174, 96, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Pie Chart
+        const ctxPie = document.getElementById('pieChart').getContext('2d');
+        new Chart(ctxPie, {
+            type: 'pie',
+            data: {
+                labels: ['Completed', 'Ongoing', 'Upcoming'],
+                datasets: [{
+                    label: 'Project Status',
+                    data: [120, 35, 15],
+                    backgroundColor: ['#3498db', '#2ecc71', '#e74c3c']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Product 1 Chart
+        const ctxProduct1 = document.getElementById('chartProduct1').getContext('2d');
+        new Chart(ctxProduct1, {
+            type: 'doughnut',
+            data: {
+                labels: ['Metric A', 'Metric B', 'Metric C'],
+                datasets: [{
+                    label: 'Product 1 Metrics',
+                    data: [10, 20, 30],
+                    backgroundColor: ['#1abc9c', '#f39c12', '#e74c3c']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Product 2 Chart
+        const ctxProduct2 = document.getElementById('chartProduct2').getContext('2d');
+        new Chart(ctxProduct2, {
+            type: 'radar',
+            data: {
+                labels: ['Quality', 'Cost', 'Time', 'Scope', 'Risk'],
+                datasets: [{
+                    label: 'Product 2 Evaluation',
+                    data: [4, 3, 5, 2, 4],
+                    backgroundColor: 'rgba(155, 89, 182, 0.2)',
+                    borderColor: 'rgba(155, 89, 182, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+    // Existing chart initializations...
+
+    // Total Resources Available Chart
+    const ctxTotalResources = document.getElementById('totalResourcesChart').getContext('2d');
+    new Chart(ctxTotalResources, {
+        type: 'doughnut',
+        data: {
+            labels: ['Available', 'Used'],
+            datasets: [{
+                data: [1000, 600],
+                backgroundColor: ['rgba(46, 204, 113, 0.7)', 'rgba(231, 76, 60, 0.7)'],
+                borderColor: ['rgba(46, 204, 113, 1)', 'rgba(231, 76, 60, 1)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Resources Used Chart
+    const ctxResourcesUsed = document.getElementById('resourcesUsedChart').getContext('2d');
+    new Chart(ctxResourcesUsed, {
+        type: 'doughnut',
+        data: {
+            labels: ['Used', 'Remaining'],
+            datasets: [{
+                data: [600, 400],
+                backgroundColor: ['rgba(231, 76, 60, 0.7)', 'rgba(155, 89, 182, 0.7)'],
+                borderColor: ['rgba(231, 76, 60, 1)', 'rgba(155, 89, 182, 1)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Ongoing Projects Chart
+    const ctxOngoing = document.getElementById('ongoingProjectsChart').getContext('2d');
+    new Chart(ctxOngoing, {
+        type: 'bar',
+        data: {
+            labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+            datasets: [{
+                label: 'Ongoing Projects',
+                data: [10, 20, 30, 40],
+                backgroundColor: 'rgba(52, 152, 219, 0.5)',
+                borderColor: 'rgba(41, 128, 185, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Completed Projects Chart
+    const ctxCompleted = document.getElementById('completedProjectsChart').getContext('2d');
+    new Chart(ctxCompleted, {
+        type: 'line',
+        data: {
+            labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+            datasets: [{
+                label: 'Completed Projects',
+                data: [5, 15, 25, 35],
+                backgroundColor: 'rgba(46, 204, 113, 0.5)',
+                borderColor: 'rgba(39, 174, 96, 1)',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Upcoming Projects Chart
+    const ctxUpcoming = document.getElementById('upcomingProjectsChart').getContext('2d');
+    new Chart(ctxUpcoming, {
+        type: 'doughnut',
+        data: {
+            labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+            datasets: [{
+                data: [15, 25, 35, 45],
+                backgroundColor: ['rgba(231, 76, 60, 0.7)', 'rgba(46, 204, 113, 0.7)', 'rgba(52, 152, 219, 0.7)', 'rgba(155, 89, 182, 0.7)'],
+                borderColor: ['rgba(231, 76, 60, 1)', 'rgba(46, 204, 113, 1)', 'rgba(52, 152, 219, 1)', 'rgba(155, 89, 182, 1)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+});
+
+
+    </script>
+    
+</body>
+</html>

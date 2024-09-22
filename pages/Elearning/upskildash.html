@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upskill Dashboard - MOHUA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./upskildash.css"> -->
+    <link rel="stylesheet" href="../../static/css/Elearning/upskildash.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            width: 100%;
+            margin: 30px 0;
+        }
+        .webinars-projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .webinar-project-item {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+        }
+        .webinar-project-item strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        /* Smaller Leaderboard Graph */
+        #leaderboardChart {
+            max-width: 300px; /* Set maximum width for the chart */
+            max-height: 300px; /* Set maximum height for the chart */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+     <!-- Sidebar -->
+     <div class="sidebar">
+        <div class="logo">
+            <h2>Upskill</h2>
+        </div>
+        <a href="./upskildash.html" class="active">Dashboard</a>
+        <a href="./upskillcourse.html">Courses</a>
+        <a href="#">My Progress</a>
+        <a href="#">Discussions</a>
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+    </div>
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <header class="header">
+            <h1>Welcome to the Upskill Dashboard</h1>
+        </header>
+
+        <!-- Profile Section -->
+        <section id="profile-section" class="content-section">
+            <h2 class="section-title">User Profile</h2>
+            <div class="profile-section">
+                <div>
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Job Title:</strong> Project Manager</p>
+                    <p><strong>Skills:</strong> Project Planning, Data Analysis, Leadership</p>
+                </div>
+                <div>
+                    <img src="./templates/profiledash.jpg" alt="User Profile Picture" class="profile-pic">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Progress Section with Chart -->
+        <section id="skills-progress" class="content-section">
+            <h2 class="section-title">Skills & Learning Progress</h2>
+            <div class="skills-progress">
+                <div>
+                    <p><strong>Ongoing Course:</strong> Advanced Project Management</p>
+                    <progress value="50" max="100"></progress>
+                    <p>50% Completed</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Courses Section -->
+        <section id="recommended-courses" class="content-section">
+            <h2 class="section-title">Personalized Course Recommendations</h2>
+            <div class="recommended-courses">
+                <div class="course-card">
+                    <p><strong>Recommended Course:</strong> Agile Methodologies</p>
+                    <a href="#" class="btn-primary">Enroll Now</a>
+                </div>
+                <div class="course-card">
+                    <p><strong>Recommended Course:</strong> Data-Driven Decision Making</p>
+                    <a href="#" class="btn-primary">Enroll Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workshops & Webinars Section with Ongoing Webinars & Projects -->
+        <section id="workshops-webinars" class="content-section">
+            <h2 class="section-title">Workshops & Webinars</h2>
+
+            <!-- Ongoing Webinars -->
+            <h3>Ongoing Webinars</h3>
+            <div class="webinars-projects">
+                <div class="webinar-project-item">
+                    <strong>Webinar 1:</strong> Project Management Best Practices<br>
+                    <span>Date: 25th September 2024</span>
+                </div>
+                <div class="webinar-project-item">
+                    <strong>Webinar 2:</strong> Building Effective Teams<br>
+                    <span>Date: 27th September 2024</span>
+                </div>
+                <div class="webinar-project-item">
+                    <strong>Webinar 3:</strong> AI in Urban Planning<br>
+                    <span>Date: 29th September 2024</span>
+                </div>
+                <div class="webinar-project-item">
+                    <strong>Webinar 4:</strong> Digital Transformation Strategies<br>
+                    <span>Date: 1st October 2024</span>
+                </div>
+                <div class="webinar-project-item">
+                    <strong>Webinar 5:</strong> Sustainable Urban Development<br>
+                    <span>Date: 3rd October 2024</span>
+                </div>
+            </div>
+
+            <!-- Ongoing Projects -->
+            <h3>Ongoing Projects</h3>
+            <div class="webinars-projects">
+                <div class="webinar-project-item">
+                    <strong>Project 1:</strong> Urban Planning for Smart Cities
+                </div>
+                <div class="webinar-project-item">
+                    <strong>Project 2:</strong> Renewable Energy Implementation
+                </div>
+                <div class="webinar-project-item">
+                    <strong>Project 3:</strong> Sustainable Housing Solutions
+                </div>
+                <div class="webinar-project-item">
+                    <strong>Project 4:</strong> Water Management Strategies
+                </div>
+                <div class="webinar-project-item">
+                    <strong>Project 5:</strong> Digital Literacy in Rural Areas
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Section with Smaller Chart -->
+        <section id="leaderboard" class="content-section">
+            <h2 class="section-title">Leaderboard</h2>
+            <ul class="leaderboard-list">
+                <li>John Doe <span>850 XP</span></li>
+                <li>Jane Smith <span>800 XP</span></li>
+                <li>Michael Lee <span>780 XP</span></li>
+            </ul>
+            <div class="chart-container">
+                <canvas id="leaderboardChart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Skills Progress Chart
+        const ctxSkills = document.getElementById('skillsChart').getContext('2d');
+        const skillsChart = new Chart(ctxSkills, {
+            type: 'bar',
+            data: {
+                labels: ['Leadership', 'Data Analysis', 'Project Planning'],
+                datasets: [{
+                    label: 'Skill Progress (%)',
+                    data: [75, 40, 90],
+                    backgroundColor: ['#3498db', '#2ecc71', '#e74c3c'],
+                    borderColor: ['#2980b9', '#27ae60', '#c0392b'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Leaderboard XP Chart (Smaller)
+        const ctxLeaderboard = document.getElementById('leaderboardChart').getContext('2d');
+        const leaderboardChart = new Chart(ctxLeaderboard, {
+            type: 'doughnut',
+            data: {
+                labels: ['John Doe', 'Jane Smith', 'Michael Lee'],
+                datasets: [{
+                    label: 'XP Points',
+                    data: [850, 800, 780],
+                    backgroundColor: ['#3498db', '#2ecc71', '#e74c3c'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Keep it responsive
+                cutout: '60%' // Make it look more compact
+            }
+        });
+    </script>
+</body>
+</html>

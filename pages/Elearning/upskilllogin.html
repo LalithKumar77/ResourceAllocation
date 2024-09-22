@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upskill | Login & Signup</title>
+    <!-- <link rel="stylesheet" href="./upskilllogin.css"> -->
+     <link rel="stylesheet" href="../../static/css/Elearning/upskilllogin.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-box">
+                <!-- Login Form -->
+                <div class="form login-form">
+                    <h2>Login to Upskill</h2>
+                    <form>
+                        <div class="input-box">
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <p class="switch-form">Don't have an account? <span onclick="flipToSignup()">Sign Up</span></p>
+                    </form>
+                </div>
+
+                <!-- Signup Form -->
+                <div class="form signup-form">
+                    <h2>Sign Up for Upskill</h2>
+                    <form>
+                        <div class="input-box">
+                            <input type="text" required>
+                            <label>Full Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" required>
+                            <label>Confirm Password</label>
+                        </div>
+                        <button type="submit" class="btn">Sign Up</button>
+                        <p class="switch-form">Already have an account? <span onclick="flipToLogin()">Login</span></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function flipToSignup() {
+            document.querySelector('.form-box').classList.add('active');
+        }
+
+        function flipToLogin() {
+            document.querySelector('.form-box').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

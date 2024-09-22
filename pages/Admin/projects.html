@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter-Departmental Cooperation Platform</title>
+    <link rel="stylesheet" href="../../static/css/Admin/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+   
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul class="menu">
+            <li><a href="./home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="./profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="./dashboard.html"><i class="fas fa-chart-bar"></i> Dashboard</a></li>
+            <li class="active"><a href="./projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="./dataExchange.html"><i class="fas fa-database"></i> Data Exchange</a></li>
+            <li><a href="./scheduling.html"><i class="fas fa-calendar-alt"></i> Scheduling</a></li>
+            <li><a href="./forums.html"><i class="fas fa-comments"></i> Forums</a></li>
+            
+        </ul>
+    </div>
+    <div class="main-content">
+        <!-- Search and Date Filter -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search projects...">
+            <div class="date-filter">
+                <input type="text" id="dateRange" placeholder="Select date range">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+        </div>
+
+        <!-- Profile Section -->
+     
+
+        <!-- Overview Cards -->
+        <div class="overview">
+            <div class="card">Ongoing Projects: <strong>24</strong></div>
+            <div class="card">Upcoming Projects: <strong>18</strong></div>
+            <div class="card">Completed Projects: <strong>35</strong></div>
+            <div class="card">Pending Requests: <strong>5</strong></div>
+            <div class="card">Total Budget: <strong>Rs.2,500,000</strong></div>
+            <div class="card">New Requests: <strong>8</strong></div>
+        </div>
+
+        <!-- Project Section -->
+        <div class="project-section">
+            <h2>Projects Overview</h2>
+            <!-- Prominent Projects -->
+            <div class="prominent-projects">
+                <div class="project-card animate-fade-in">
+                    <img src="../startbootstrap-sb-admin-2-gh-pages/img/18-20140228-01.jpg" alt="Road Development" class="project-img">
+                    <div class="project-info">
+                        <h3>Road Development</h3>
+                        <p>A major infrastructure project to enhance road connectivity.</p>
+                    </div>
+                </div>
+                <div class="project-card animate-fade-in">
+                    <img src="../startbootstrap-sb-admin-2-gh-pages/img/gas pipe.jpeg" alt="Gas Pipeline Installation" class="project-img">
+                    <div class="project-info">
+                        <h3>Gas Pipeline Installation</h3>
+                        <p>Installing new pipelines to improve gas supply.</p>
+                    </div>
+                </div>
+                <div class="project-card animate-fade-in">
+                    <img src="../startbootstrap-sb-admin-2-gh-pages/img/traffic.jpg" alt="Smart Traffic Signals" class="project-img">
+                    <div class="project-info">
+                        <h3>Smart Traffic Signals</h3>
+                        <p>Modernizing traffic signals for better traffic management.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Projects Info -->
+            <div class="detailed-projects">
+                <h3>Inter-Departmental Projects</h3>
+                <table class="projects-table">
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                            <th>Timeline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Road Development</td>
+                            <td>Public Works</td>
+                            <td>Ongoing</td>
+                            <td>Jan 2024 - Dec 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Gas Pipeline Installation</td>
+                            <td>Utilities</td>
+                            <td>Upcoming</td>
+                            <td>Feb 2024 - Jun 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Smart Traffic Signals</td>
+                            <td>Transport</td>
+                            <td>Completed</td>
+                            <td>May 2023 - Aug 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Water Supply Line</td>
+                            <td>Waterworks</td>
+                            <td>Ongoing</td>
+                            <td>Mar 2024 - Dec 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Park Renovation</td>
+                            <td>Urban Development</td>
+                            <td>Completed</td>
+                            <td>Apr 2023 - Oct 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Drainage Upgrade</td>
+                            <td>Sanitation</td>
+                            <td>Upcoming</td>
+                            <td>Jun 2024 - Sep 2024</td>
+                        </tr>
+                        <tr>
+                            <td>School Building</td>
+                            <td>Education</td>
+                            <td>Ongoing</td>
+                            <td>Jan 2024 - Sep 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Community Center</td>
+                            <td>Community Services</td>
+                            <td>Upcoming</td>
+                            <td>Jul 2024 - Dec 2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Intra-Departmental Projects</h3>
+                <table class="projects-table">
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                            <th>Timeline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Document Management System</td>
+                            <td>IT</td>
+                            <td>Completed</td>
+                            <td>Jan 2023 - Apr 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Internal Communication Tools</td>
+                            <td>HR</td>
+                            <td>Ongoing</td>
+                            <td>May 2023 - Oct 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Employee Training Programs</td>
+                            <td>Training</td>
+                            <td>Upcoming</td>
+                            <td>Nov 2023 - Mar 2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- All Projects Section -->
+       <!-- All Projects Section -->
+<div class="all-projects-section">
+    <h2>Projects by the Ministry of Housing and Urban Affairs</h2>
+    <!-- Project Cards -->
+    <div class="all-project-cards">
+        <div class="project-card animate-fade-in">
+            <img src="../startbootstrap-sb-admin-2-gh-pages/img/smart city.jpg" alt="Smart City Initiative" class="project-img">
+            <div class="project-info">
+                <h3>Smart City Initiative</h3>
+                <p>A mission to promote sustainable and inclusive urban development in selected cities across the country.</p>
+            </div>
+        </div>
+        <div class="project-card animate-fade-in">
+            <img src="../startbootstrap-sb-admin-2-gh-pages/img/Pradhan_Mantri_Awas_Yojana-Urban_(PMAY-U)_logo.png" alt="Pradhan Mantri Awas Yojana" class="project-img">
+            <div class="project-info">
+                <h3>Pradhan Mantri Awas Yojana</h3>
+                <p>Providing affordable housing to the urban poor with a target to build 20 million affordable houses.</p>
+            </div>
+        </div>
+        <div class="project-card animate-fade-in">
+            <img src="../startbootstrap-sb-admin-2-gh-pages/img/urbna transport.jpg" alt="Urban Transport Infrastructure" class="project-img">
+            <div class="project-info">
+                <h3>Urban Transport Infrastructure</h3>
+                <p>Developing efficient and integrated urban transport systems, including metro rail and BRTS corridors.</p>
+            </div>
+        </div>
+        <div class="project-card animate-fade-in">
+            <img src="../startbootstrap-sb-admin-2-gh-pages/img/swach bharat.png" alt="Swachh Bharat Mission - Urban" class="project-img">
+            <div class="project-info">
+                <h3>Swachh Bharat Mission - Urban</h3>
+                <p>A campaign to clean up the streets, roads, and infrastructure of cities and towns across India.</p>
+            </div>
+        </div>
+        <div class="project-card animate-fade-in">
+            <img src="../startbootstrap-sb-admin-2-gh-pages/img/amrut.png" alt="AMRUT (Atal Mission)" class="project-img">
+            <div class="project-info">
+                <h3>AMRUT (Atal Mission)</h3>
+                <p>Providing basic services like water supply, sewerage, and urban transportation to improve the quality of life.</p>
+            </div>
+        </div>
+        <div class="project-card animate-fade-in">
+            <img src="../startbootstrap-sb-admin-2-gh-pages/img/hriday.jpeg" alt="HRIDAY Scheme" class="project-img">
+            <div class="project-info">
+                <h3>HRIDAY Scheme</h3>
+                <p>Heritage City Development and Augmentation Yojana to preserve and rejuvenate India's rich cultural heritage.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Graphs Section -->
+        <div class="charts-section">
+            <h2>Project Analytics</h2><br>
+            <div class="chart-container">
+                <canvas id="projectProgressChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="budgetChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+       <!-- Chatbot Button -->
+   <div class="chatbot-container">
+    <button class="chatbot-btn" onclick="toggleChatbot()">
+        <i class="fa fa-comments"></i>
+    </button>
+</div>
+
+<!-- Chatbot Popup -->
+<div id="chatbotPopup" class="chatbot-popup">
+    <div class="chatbot-header">
+        <h2>Chatbot</h2>
+        <button class="close-btn" onclick="toggleChatbot()">&times;</button>
+    </div>
+    <div id="chatWindow" class="chatbot-body"></div>
+    <div class="chatbot-footer">
+        <input type="text" id="userInput" placeholder="Type your message here..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.0/chart.min.js"></script>
+    <script src="../../static/js/admin/chatbot.js"></script>
+    <script src="../../static/js/admin/projects.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+</body>
+</html>
