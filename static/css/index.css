@@ -241,6 +241,14 @@ body.active { overflow: hidden; }
   width: 100%;
   transition: var(--transition-1);
   z-index: 4;
+  background: transparent; /* Default background */
+}
+
+.header.scrolled {
+  background: white; /* Background color when scrolled */
+  box-shadow: var(--shadow-1); /* Optional shadow for better visibility */
+  padding-block: 10px;
+  height: 70px;
 }
 
 .header.active {
@@ -1314,7 +1322,10 @@ html {
   }
 }
 
-/* photo gallery */
+/* Photo Gallery */
+
+/* Styles for Image Slider Section */
+/* Photo Gallery */
 
 /* Styles for Image Slider Section */
 .slider-container {
@@ -1322,8 +1333,9 @@ html {
   padding: 20px;
   border-radius: 5px;
   text-align: center;
-  overflow: hidden; /* Hide overflow for the scrolling effect */
+  overflow: hidden; /* Hide overflow for scrolling effect */
   margin-top: 50px;
+  position: relative;
 }
 
 .slider-container h3 {
@@ -1332,20 +1344,20 @@ html {
   color: #333;
 }
 
-
 .slider {
   display: flex;
-  overflow: hidden;
-  position: relative;
+  width: calc(200px * 12); /* Width based on number of images (12 images here) */
+  animation: scroll-horizontal 30s linear infinite; /* Smooth infinite scroll */
 }
 
+/* Duplicate the slides in JavaScript for looping */
 .slide {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  width: 200px; /* Fixed width of each slide */
-  height: 150px; /* Fixed height of each slide */
+  width: 200px; /* Fixed width for each slide */
+  height: 150px; /* Fixed height for each slide */
   margin-right: 10px; /* Space between slides */
   position: relative;
 }
@@ -1392,19 +1404,25 @@ html {
 /* Horizontal Scrolling Animation */
 @keyframes scroll-horizontal {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%); /* Shift left to scroll through all images */
   }
-}
-
-/* Apply animation to the slider */
-.slider {
-  animation: scroll-horizontal 20s linear infinite;
 }
 
 /* Pause scrolling when hovered */
 .slider-container:hover .slider {
   animation-play-state: paused;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 100%;
+  }
+  .slide {
+    width: 150px;
+    height: 120px;
+  }
 }
