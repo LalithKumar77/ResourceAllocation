@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Government Projects Map</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .map-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #map {
+            height: 600px;
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        .reset-zoom-btn {
+            position: absolute;
+            top: 80px;
+            right: 50px;
+            z-index: 1000;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .reset-zoom-btn:hover {
+            background-color: #218838;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="map-container">
+        <h2>Indian Government Projects Map</h2>
+        <div id="map"></div>
+        <button class="reset-zoom-btn" onclick="resetZoom()">Reset Zoom</button>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- JavaScript for Map Functionality -->
+    <script>
+        // Initialize the map and set its view to India
+        var map = L.map('map').setView([20.5937, 78.9629], 5);
+
+        // Load OpenStreetMap tiles with colorful options
+        L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a>'
+        }).addTo(map);
+
+        // Reset map to default zoom
+        function resetZoom() {
+            map.setView([20.5937, 78.9629], 5);
+        }
+
+        // Function to create custom colorful markers
+        function getColorMarker(color) {
+            return L.icon({
+                iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-${color}.png`,
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            });
+        }
+
+        // Sample project data with colorful markers
+        var projects = [
+            {
+                name: "Smart Cities Mission",
+                department: "Ministry of Housing and Urban Affairs",
+                description: "Developing 100 smart cities to enhance urban life.",
+                coordinates: [28.6139, 77.2090],  // Delhi
+                markerColor: "blue"
+            },
+            {
+                name: "AMRUT - Atal Mission",
+                department: "Ministry of Housing and Urban Affairs",
+                description: "Providing infrastructure for urban quality of life.",
+                coordinates: [18.5204, 73.8567],  // Pune
+                markerColor: "green"
+            },
+            {
+                name: "Pradhan Mantri Awas Yojana",
+                department: "Ministry of Housing and Urban Affairs",
+                description: "Affordable housing for all by 2022.",
+                coordinates: [23.0225, 72.5714],  // Ahmedabad
+                markerColor: "red"
+            },
+            {
+                name: "Clean Ganga Mission",
+                department: "Ministry of Water Resources",
+                description: "A mission to rejuvenate and clean the Ganga River.",
+                coordinates: [25.4358, 81.8463],  // Prayagraj
+                markerColor: "orange"
+            },
+            {
+                name: "Swachh Bharat Mission",
+                department: "Ministry of Urban Development",
+                description: "A mission to clean up urban and rural areas across India.",
+                coordinates: [22.5726, 88.3639],  // Kolkata
+                markerColor: "yellow"
+            },
+            {
+                name: "Digital India",
+                department: "Ministry of Electronics and IT",
+                description: "Promoting digital literacy and infrastructure across India.",
+                coordinates: [12.9716, 77.5946],  // Bengaluru
+                markerColor: "violet"
+            },
+            {
+                name: "Bharatmala Project",
+                department: "Ministry of Road Transport",
+                description: "A large highway development project to improve road infrastructure.",
+                coordinates: [19.0760, 72.8777],  // Mumbai
+                markerColor: "blue"
+            },
+            {
+                name: "Sagarmala Project",
+                department: "Ministry of Shipping",
+                description: "Port-led development to boost India's logistics sector.",
+                coordinates: [15.2993, 74.1240],  // Goa
+                markerColor: "red"
+            }
+        ];
+
+        // Loop through the projects and add colorful markers to the map
+        projects.forEach(function(project) {
+            var marker = L.marker(project.coordinates, { icon: getColorMarker(project.markerColor) }).addTo(map);
+            marker.bindPopup(
+                `<strong>${project.name}</strong><br>
+                Department: ${project.department}<br>
+                Description: ${project.description}`
+            );
+        });
+    </script>
+
+</body>
+</html>
